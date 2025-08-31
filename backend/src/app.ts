@@ -9,6 +9,13 @@ const app = express();
 
 app.use(cors({
   origin: "https://el-hamzawy-factory.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
+}));
+
+app.options("*", cors({
+  origin: "https://el-hamzawy-factory.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true,
 }));
 
