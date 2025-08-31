@@ -15,7 +15,7 @@ function SupplierForm({ onSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3000/api/suppliers", form);
+    await axios.post("https://hamzawy-factory.vercel.app/api/suppliers", form);
     setForm({ name: "", phone: "", email: "", address: "" });
     onSuccess();
   };

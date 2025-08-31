@@ -7,7 +7,9 @@ function SupplierTable() {
   const [showForm, setShowForm] = useState(false);
 
   const fetchSuppliers = async () => {
-    const res = await axios.get("http://localhost:3000/api/suppliers");
+    const res = await axios.get(
+      "https://hamzawy-factory.vercel.app/api/suppliers"
+    );
     setSuppliers(res.data);
   };
 
